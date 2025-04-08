@@ -4,6 +4,6 @@ torchvision
 opencv-python
 Pillow
 numpy
-kafka-python
 pandas
 plotly
+kafka-python
