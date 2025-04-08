@@ -1,0 +1,14 @@
+streamlit
+torch
+opencv-python
+Pillow
+numpy
+os
+time
+json
+kafka.KafkaProducer
+kafka.KafkaConsumer
+pandas 
+torchvision.transforms
+torchvision.models
+plotly.express
