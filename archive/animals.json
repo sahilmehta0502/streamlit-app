@@ -1,0 +1,454 @@
+{
+    "categories": [
+        {
+            "id": 1,
+            "name": "antelope",
+            "supercategory": "animal"
+        },
+        {
+            "id": 2,
+            "name": "badger",
+            "supercategory": "animal"
+        },
+        {
+            "id": 3,
+            "name": "bat",
+            "supercategory": "animal"
+        },
+        {
+            "id": 4,
+            "name": "bear",
+            "supercategory": "animal"
+        },
+        {
+            "id": 5,
+            "name": "bee",
+            "supercategory": "animal"
+        },
+        {
+            "id": 6,
+            "name": "beetle",
+            "supercategory": "animal"
+        },
+        {
+            "id": 7,
+            "name": "bison",
+            "supercategory": "animal"
+        },
+        {
+            "id": 8,
+            "name": "boar",
+            "supercategory": "animal"
+        },
+        {
+            "id": 9,
+            "name": "butterfly",
+            "supercategory": "animal"
+        },
+        {
+            "id": 10,
+            "name": "cat",
+            "supercategory": "animal"
+        },
+        {
+            "id": 11,
+            "name": "caterpillar",
+            "supercategory": "animal"
+        },
+        {
+            "id": 12,
+            "name": "chimpanzee",
+            "supercategory": "animal"
+        },
+        {
+            "id": 13,
+            "name": "cockroach",
+            "supercategory": "animal"
+        },
+        {
+            "id": 14,
+            "name": "cow",
+            "supercategory": "animal"
+        },
+        {
+            "id": 15,
+            "name": "coyote",
+            "supercategory": "animal"
+        },
+        {
+            "id": 16,
+            "name": "crab",
+            "supercategory": "animal"
+        },
+        {
+            "id": 17,
+            "name": "crow",
+            "supercategory": "animal"
+        },
+        {
+            "id": 18,
+            "name": "deer",
+            "supercategory": "animal"
+        },
+        {
+            "id": 19,
+            "name": "dog",
+            "supercategory": "animal"
+        },
+        {
+            "id": 20,
+            "name": "dolphin",
+            "supercategory": "animal"
+        },
+        {
+            "id": 21,
+            "name": "donkey",
+            "supercategory": "animal"
+        },
+        {
+            "id": 22,
+            "name": "dragonfly",
+            "supercategory": "animal"
+        },
+        {
+            "id": 23,
+            "name": "duck",
+            "supercategory": "animal"
+        },
+        {
+            "id": 24,
+            "name": "eagle",
+            "supercategory": "animal"
+        },
+        {
+            "id": 25,
+            "name": "elephant",
+            "supercategory": "animal"
+        },
+        {
+            "id": 26,
+            "name": "flamingo",
+            "supercategory": "animal"
+        },
+        {
+            "id": 27,
+            "name": "fly",
+            "supercategory": "animal"
+        },
+        {
+            "id": 28,
+            "name": "fox",
+            "supercategory": "animal"
+        },
+        {
+            "id": 29,
+            "name": "goat",
+            "supercategory": "animal"
+        },
+        {
+            "id": 30,
+            "name": "goldfish",
+            "supercategory": "animal"
+        },
+        {
+            "id": 31,
+            "name": "goose",
+            "supercategory": "animal"
+        },
+        {
+            "id": 32,
+            "name": "gorilla",
+            "supercategory": "animal"
+        },
+        {
+            "id": 33,
+            "name": "grasshopper",
+            "supercategory": "animal"
+        },
+        {
+            "id": 34,
+            "name": "hamster",
+            "supercategory": "animal"
+        },
+        {
+            "id": 35,
+            "name": "hare",
+            "supercategory": "animal"
+        },
+        {
+            "id": 36,
+            "name": "hedgehog",
+            "supercategory": "animal"
+        },
+        {
+            "id": 37,
+            "name": "hippopotamus",
+            "supercategory": "animal"
+        },
+        {
+            "id": 38,
+            "name": "hornbill",
+            "supercategory": "animal"
+        },
+        {
+            "id": 39,
+            "name": "horse",
+            "supercategory": "animal"
+        },
+        {
+            "id": 40,
+            "name": "hummingbird",
+            "supercategory": "animal"
+        },
+        {
+            "id": 41,
+            "name": "hyena",
+            "supercategory": "animal"
+        },
+        {
+            "id": 42,
+            "name": "jellyfish",
+            "supercategory": "animal"
+        },
+        {
+            "id": 43,
+            "name": "kangaroo",
+            "supercategory": "animal"
+        },
+        {
+            "id": 44,
+            "name": "koala",
+            "supercategory": "animal"
+        },
+        {
+            "id": 45,
+            "name": "ladybugs",
+            "supercategory": "animal"
+        },
+        {
+            "id": 46,
+            "name": "leopard",
+            "supercategory": "animal"
+        },
+        {
+            "id": 47,
+            "name": "lion",
+            "supercategory": "animal"
+        },
+        {
+            "id": 48,
+            "name": "lizard",
+            "supercategory": "animal"
+        },
+        {
+            "id": 49,
+            "name": "lobster",
+            "supercategory": "animal"
+        },
+        {
+            "id": 50,
+            "name": "mosquito",
+            "supercategory": "animal"
+        },
+        {
+            "id": 51,
+            "name": "moth",
+            "supercategory": "animal"
+        },
+        {
+            "id": 52,
+            "name": "mouse",
+            "supercategory": "animal"
+        },
+        {
+            "id": 53,
+            "name": "octopus",
+            "supercategory": "animal"
+        },
+        {
+            "id": 54,
+            "name": "okapi",
+            "supercategory": "animal"
+        },
+        {
+            "id": 55,
+            "name": "orangutan",
+            "supercategory": "animal"
+        },
+        {
+            "id": 56,
+            "name": "otter",
+            "supercategory": "animal"
+        },
+        {
+            "id": 57,
+            "name": "owl",
+            "supercategory": "animal"
+        },
+        {
+            "id": 58,
+            "name": "ox",
+            "supercategory": "animal"
+        },
+        {
+            "id": 59,
+            "name": "oyster",
+            "supercategory": "animal"
+        },
+        {
+            "id": 60,
+            "name": "panda",
+            "supercategory": "animal"
+        },
+        {
+            "id": 61,
+            "name": "parrot",
+            "supercategory": "animal"
+        },
+        {
+            "id": 62,
+            "name": "pelecaniformes",
+            "supercategory": "animal"
+        },
+        {
+            "id": 63,
+            "name": "penguin",
+            "supercategory": "animal"
+        },
+        {
+            "id": 64,
+            "name": "pig",
+            "supercategory": "animal"
+        },
+        {
+            "id": 65,
+            "name": "pigeon",
+            "supercategory": "animal"
+        },
+        {
+            "id": 66,
+            "name": "porcupine",
+            "supercategory": "animal"
+        },
+        {
+            "id": 67,
+            "name": "possum",
+            "supercategory": "animal"
+        },
+        {
+            "id": 68,
+            "name": "raccoon",
+            "supercategory": "animal"
+        },
+        {
+            "id": 69,
+            "name": "rat",
+            "supercategory": "animal"
+        },
+        {
+            "id": 70,
+            "name": "reindeer",
+            "supercategory": "animal"
+        },
+        {
+            "id": 71,
+            "name": "rhinoceros",
+            "supercategory": "animal"
+        },
+        {
+            "id": 72,
+            "name": "sandpiper",
+            "supercategory": "animal"
+        },
+        {
+            "id": 73,
+            "name": "seahorse",
+            "supercategory": "animal"
+        },
+        {
+            "id": 74,
+            "name": "seal",
+            "supercategory": "animal"
+        },
+        {
+            "id": 75,
+            "name": "shark",
+            "supercategory": "animal"
+        },
+        {
+            "id": 76,
+            "name": "sheep",
+            "supercategory": "animal"
+        },
+        {
+            "id": 77,
+            "name": "snake",
+            "supercategory": "animal"
+        },
+        {
+            "id": 78,
+            "name": "sparrow",
+            "supercategory": "animal"
+        },
+        {
+            "id": 79,
+            "name": "squid",
+            "supercategory": "animal"
+        },
+        {
+            "id": 80,
+            "name": "squirrel",
+            "supercategory": "animal"
+        },
+        {
+            "id": 81,
+            "name": "starfish",
+            "supercategory": "animal"
+        },
+        {
+            "id": 82,
+            "name": "swan",
+            "supercategory": "animal"
+        },
+        {
+            "id": 83,
+            "name": "tiger",
+            "supercategory": "animal"
+        },
+        {
+            "id": 84,
+            "name": "turkey",
+            "supercategory": "animal"
+        },
+        {
+            "id": 85,
+            "name": "turtle",
+            "supercategory": "animal"
+        },
+        {
+            "id": 86,
+            "name": "whale",
+            "supercategory": "animal"
+        },
+        {
+            "id": 87,
+            "name": "wolf",
+            "supercategory": "animal"
+        },
+        {
+            "id": 88,
+            "name": "wombat",
+            "supercategory": "animal"
+        },
+        {
+            "id": 89,
+            "name": "woodpecker",
+            "supercategory": "animal"
+        },
+        {
+            "id": 90,
+            "name": "zebra",
+            "supercategory": "animal"
+        }
+    ]
+}
