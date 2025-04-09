@@ -7,3 +7,5 @@ numpy
 pandas
 plotly
 kafka-python
+gspread
+oauth2client

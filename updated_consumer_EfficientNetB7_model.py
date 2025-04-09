@@ -1,4 +1,4 @@
-# updated_consumer.py
+# updated_consumer_EfficientNetB7_model.py
 
 from kafka import KafkaConsumer
 import json
@@ -8,10 +8,38 @@ from torchvision import models
 from PIL import Image
 import os
 import time
+import gspread
+from oauth2client.service_account import ServiceAccountCredentials
 
 # Kafka Configuration
 KAFKA_TOPIC = "animal_images_stream"
 KAFKA_SERVER = "localhost:9092"
+
+# Google Sheets setup
+def get_gsheet_client():
+    scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
+    creds = ServiceAccountCredentials.from_json_keyfile_name("credentials.json", scope)
+    client = gspread.authorize(creds)
+    return client
+
+# Save record to Google Sheet
+def save_to_google_sheet(data):
+    try:
+        client = get_gsheet_client()
+        sheet = client.open("animal_classifications").sheet1
+        row = [
+            data["file_name"],
+            data["species"],
+            data["accuracy"],
+            data["file_size_kb"],
+            data["resolution"],
+            data["processing_speed_ms"],
+            data["timestamp"]
+        ]
+        sheet.append_row(row)
+        print("✅ Added to Google Sheet.")
+    except Exception as e:
+        print(f"❌ Google Sheet update failed: {e}")
 
 # Load Pretrained EfficientNet-B7 Model
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -28,20 +56,6 @@ transform = transforms.Compose([
 
 # Load ImageNet Labels
 imagenet_labels = models.EfficientNet_B7_Weights.DEFAULT.meta["categories"]
-
-# Output File
-OUTPUT_FILE = "consumer_output.json"
-
-# Save to JSON
-def save_to_file(data):
-    if not os.path.exists(OUTPUT_FILE):
-        with open(OUTPUT_FILE, "w") as f:
-            json.dump([], f)
-    with open(OUTPUT_FILE, "r") as f:
-        existing_data = json.load(f)
-    existing_data.append(data)
-    with open(OUTPUT_FILE, "w") as f:
-        json.dump(existing_data, f, indent=4)
 
 # Classification Function
 def classify_animal(image_path):
@@ -87,8 +101,6 @@ def consume_images_from_kafka():
 
         processed_data = {
             "file_name": os.path.basename(image_path),
-            "true_species": species,   # This can be updated with ground truth if available
-            "predicted_species": species,
             "species": species,
             "accuracy": accuracy,
             "file_size_kb": file_size,
@@ -98,7 +110,7 @@ def consume_images_from_kafka():
         }
 
         print(f"🔍 {species} ({accuracy}%) | Size: {file_size} KB | Resolution: {resolution} | Speed: {processing_speed} ms")
-        save_to_file(processed_data)
+        save_to_google_sheet(processed_data)
 
 # Run the Consumer
 if __name__ == "__main__":
