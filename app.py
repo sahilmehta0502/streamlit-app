@@ -3,36 +3,37 @@ import pandas as pd
 import plotly.express as px
 import os
 import time
-
-# File path
-DATA_FILE = "consumer_output.json"
+import gspread
+import json
+from oauth2client.service_account import ServiceAccountCredentials
 
 # Streamlit Page Config
 st.set_page_config(page_title="🐾 Animal Classification Dashboard", layout="wide")
 
-# Load Data Function
-@st.cache_data(ttl=5)
-def load_data():
+# Google Sheet Reader using st.secrets
+def get_gsheet_df():
     try:
-        df = pd.read_json(DATA_FILE)
-        if df.empty:
-            return pd.DataFrame(columns=["file_name", "species", "accuracy", "file_size_kb", "timestamp"])
-        df["accuracy"] = df["accuracy"].round(2)
-        df["file_size_kb"] = df.get("file_size_kb", 0).round(2)
-        df = df.tail(10)  # Last 10 records
+        scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
+        creds_dict = json.loads(st.secrets["credentials_json"])
+        creds = ServiceAccountCredentials.from_json_keyfile_dict(creds_dict, scope)
+        client = gspread.authorize(creds)
+        sheet = client.open("animal_classifications").sheet1
+        records = sheet.get_all_records()
+        df = pd.DataFrame(records)
+        df["accuracy"] = df["accuracy"].astype(float).round(2)
+        df["file_size_kb"] = df["file_size_kb"].astype(float).round(2)
         return df
-    except (ValueError, FileNotFoundError):
+    except Exception as e:
+        st.error(f"❌ Failed to load Google Sheet: {e}")
         return pd.DataFrame(columns=["file_name", "species", "accuracy", "file_size_kb", "timestamp"])
 
-# Load Full Data for Totals
+@st.cache_data(ttl=5)
+def load_data():
+    df = get_gsheet_df()
+    return df.tail(10)
+
 def load_full_data():
-    try:
-        df_all = pd.read_json(DATA_FILE)
-        df_all["accuracy"] = df_all["accuracy"].round(2)
-        df_all["file_size_kb"] = df_all.get("file_size_kb", 0).round(2)
-        return df_all
-    except (ValueError, FileNotFoundError):
-        return pd.DataFrame(columns=["file_name", "species", "accuracy", "file_size_kb", "timestamp"])
+    return get_gsheet_df()
 
 # Export CSV
 def convert_df(df):
