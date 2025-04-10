@@ -2814,5 +2814,49 @@
         "resolution": "201x251",
         "processing_speed_ms": 1729.25,
         "timestamp": 1744214000.1602387
+    },
+    {
+        "file_name": "4cb42bf550.jpg",
+        "true_species": "brown bear",
+        "predicted_species": "brown bear",
+        "species": "brown bear",
+        "accuracy": 82.65,
+        "file_size_kb": 15.74,
+        "resolution": "261x193",
+        "processing_speed_ms": 1795.39,
+        "timestamp": 1744214010.2068946
+    },
+    {
+        "file_name": "4e7dc3eb5f.jpg",
+        "true_species": "American black bear",
+        "predicted_species": "American black bear",
+        "species": "American black bear",
+        "accuracy": 81.26,
+        "file_size_kb": 15.83,
+        "resolution": "253x199",
+        "processing_speed_ms": 1818.44,
+        "timestamp": 1744214020.2617142
+    },
+    {
+        "file_name": "506eee4ad2.jpg",
+        "true_species": "American black bear",
+        "predicted_species": "American black bear",
+        "species": "American black bear",
+        "accuracy": 82.03,
+        "file_size_kb": 27.79,
+        "resolution": "636x423",
+        "processing_speed_ms": 1475.62,
+        "timestamp": 1744214030.3210843
+    },
+    {
+        "file_name": "50de227a21.jpg",
+        "true_species": "brown bear",
+        "predicted_species": "brown bear",
+        "species": "brown bear",
+        "accuracy": 76.7,
+        "file_size_kb": 16.18,
+        "resolution": "275x183",
+        "processing_speed_ms": 1965.84,
+        "timestamp": 1744214040.389792
     }
 ]

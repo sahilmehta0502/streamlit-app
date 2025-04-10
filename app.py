@@ -44,7 +44,7 @@ def highlight_accuracy(val):
     return "background-color: red; color: white;" if val < 50 else ""
 
 # 🔍 Recursive search for image file
-def find_image_path(filename, root_dir="archive/animals/animals"):
+def find_image_path(filename, root_dir="archive/animals/animals/"):
     for dirpath, _, filenames in os.walk(root_dir):
         filenames_lower = [f.lower() for f in filenames]
         if filename.lower() in filenames_lower:
